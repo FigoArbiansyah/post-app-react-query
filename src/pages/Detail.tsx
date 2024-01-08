@@ -1,6 +1,7 @@
 // import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "react-query";
+import ErrorPage from "./ErrorPage";
 
 const Detail = () => {
   const { VITE_BASE_URL } = import.meta.env;
@@ -17,17 +18,17 @@ const Detail = () => {
 
   if (isLoading) {
     return (
-      <div className="text-center py-4">
+      <ErrorPage>
         <span>Loading...</span>
-      </div>
+      </ErrorPage>
     );
   }
 
   if (error) {
     return (
-      <div className="text-center py-4">
+      <ErrorPage>
         <span>Ada kesalahan pada aplikasi...</span>
-      </div>
+      </ErrorPage>
     );
   }
 

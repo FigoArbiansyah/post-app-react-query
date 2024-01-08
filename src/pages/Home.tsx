@@ -1,6 +1,7 @@
 // import React from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "react-query";
+import ErrorPage from "./ErrorPage";
 
 interface PostInterface {
   id: number;
@@ -23,17 +24,17 @@ const Home = () => {
 
   if (isLoading) {
     return (
-      <div className="text-center py-4">
+      <ErrorPage>
         <span>Loading...</span>
-      </div>
+      </ErrorPage>
     );
   }
 
   if (error) {
     return (
-      <div className="text-center py-4">
+      <ErrorPage>
         <span>Ada kesalahan pada aplikasi...</span>
-      </div>
+      </ErrorPage>
     );
   }
 
