@@ -35,7 +35,26 @@ const Detail = () => {
   return (
     <main className="md:p-10 p-5 bg-white">
       <section>
-        <Link to="/">Kembali</Link>
+        <Link
+          to="/"
+          className="flex items-center gap-1 hover:gap-2 transition-all ease"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-4 h-4"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+            />
+          </svg>
+          <span>Kembali</span>
+        </Link>
         <h2 className="text-xl font-semibold mt-3">{data?.title}</h2>
         <p className="mt-3 text-slate-800">{data?.body}</p>
       </section>
